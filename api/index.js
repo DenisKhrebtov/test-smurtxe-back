@@ -6,10 +6,10 @@ router.get("/ideas", ctrlIdeas.getAll);
 
 router.post("/ideas", ctrlIdeas.add);
 
-router.put("/tasks/:id", ctrlIdeas.update);
+router.patch("/ideas/:id/completed", ctrlIdeas.updateCompletedStatus);
 
-router.patch("/tasks/:id/status", ctrlIdeas.updateStatus);
+router.patch("/ideas/:id/selected", ctrlIdeas.updateSelect);
 
-router.delete("/tasks/:id", ctrlIdeas.remove);
+router.delete("/ideas/:id", ctrlIdeas.remove);
 
 module.exports = router;

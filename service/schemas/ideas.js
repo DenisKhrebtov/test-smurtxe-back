@@ -13,7 +13,11 @@ const idea = new Schema(
       minlength: 3,
       required: [true, "type is required"],
     },
-    isDone: {
+    completed: {
+      type: Boolean,
+      default: false,
+    },
+    selected: {
       type: Boolean,
       default: false,
     },
